@@ -1,0 +1,57 @@
+* {
+  cursor: none;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: lightblue;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+main {
+  min-width: 100vw;
+  min-height: 100vh;
+  padding: 50px;
+}
+
+#folower,
+#cursor {
+  position: fixed;
+  z-index: 998;
+  top: 0;
+  left: 0;
+  will-change: top, left;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+#cursor {
+  width: 6px;
+  height: 6px;
+  margin-top: -3px;
+  margin-left: -3px;
+  background-color: #000000;
+  z-index: 999;
+}
+
+#folower {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.2);
+  margin-top: -21px;
+  margin-left: -21px;
+  transform-origin: center;
+  transition: transform .3s cubic-bezier(.75,-1.27,.3,2.33);
+  transform: scale(1);
+}
+
+#folower.action {
+  transform: scale(1.4);
+}
+
+#folower.click {
+  transform: scale(0.8);
+}
