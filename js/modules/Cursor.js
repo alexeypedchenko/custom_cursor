@@ -1,7 +1,7 @@
 export default class Cursor {
-  constructor(cursor, folower, delay = 300) {
+  constructor(cursor, follower, delay = 300) {
     this.cursor = document.querySelector(cursor)
-    this.folower = document.querySelector(folower)
+    this.follower = document.querySelector(follower)
     this.delay = delay
     // this.init()
   }
@@ -48,17 +48,17 @@ export default class Cursor {
   }
 
   addActionClass() {
-    this.folower.classList.add('action')
+    this.follower.classList.add('action')
   }
   removeActionClass() {
-    this.folower.classList.remove('action')
+    this.follower.classList.remove('action')
   }
 
   addClickClass() {
-    this.folower.classList.add('click')
+    this.follower.classList.add('click')
   }
   removeClickClass() {
-    this.folower.classList.remove('click')
+    this.follower.classList.remove('click')
   }
 
   async setElemsPosition({x, y}) {
@@ -68,7 +68,7 @@ export default class Cursor {
     this.setCoodrs(this.cursor, x, y)
 
     await this.sleep(this.delay)
-    this.setCoodrs(this.folower, x, y)
+    this.setCoodrs(this.follower, x, y)
   }
 
   setCoodrs(elem, x, y) {

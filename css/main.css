@@ -16,7 +16,7 @@ main {
   padding: 50px;
 }
 
-#folower,
+#follower,
 #cursor {
   position: fixed;
   z-index: 998;
@@ -36,7 +36,7 @@ main {
   z-index: 999;
 }
 
-#folower {
+#follower {
   width: 40px;
   height: 40px;
   border: 1px solid rgba(0, 0, 0, 0.5);
@@ -48,10 +48,10 @@ main {
   transform: scale(1);
 }
 
-#folower.action {
+#follower.action {
   transform: scale(1.4);
 }
 
-#folower.click {
+#follower.click {
   transform: scale(0.8);
 }
